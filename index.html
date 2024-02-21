@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monipuolinen QR-koodin Generaattori</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <p>
+        <a href="https://www.janitorvinen.fi">Takaisin etusivulle</a> 
+    </p>
+        
+    <div class="container">
+        <h1>QR-koodin Generaattori</h1>
+        <div class="input-group">
+            <label for="tyyppi">Tyyppi:</label>
+            <select id="tyyppi">
+                <option value="teksti">Teksti</option>
+                <option value="url">URL</option>
+                <option value="email">Sähköposti</option>
+                <option value="puhelin">Puhelinnumero</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="sisalto">Syötä teksti:</label>
+            <input type="text" id="sisalto" placeholder="Syötä teksti">
+            <div id="merkkienMaara" class="merkkien-maara"></div>
+        </div>
+        <div class="input-group">
+            <label for="koko">QR-koodin koko:</label>
+            <input type="range" id="koko" min="100" max="400" value="200">
+            <span id="koko-arvo" class="koko-arvo">200</span>
+        </div>
+        <button onclick="generoiQRKoodi()">Generoi QR-koodi</button>
+        <div id="qrcode" class="qrcode"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
